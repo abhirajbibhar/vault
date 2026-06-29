@@ -1,0 +1,12 @@
+{
+  "name": "vaults",
+  "scripts": {
+    "site": "python vault.py",
+    "deploy-confirmation": "node scripts/deploy-confirmation.js",
+    "predeploy": "npm run deploy-confirmation --silent",
+    "deploy": "npm run site && wrangler pages deploy ./ --project-name=vaults"
+  },
+  "devDependencies": {
+    "wrangler": "^4.98.0"
+  }
+}
